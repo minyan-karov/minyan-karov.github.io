@@ -1,5 +1,5 @@
 angular.
   module('senagogMap').
   component('senagogMap', {
-        template: '<p>this is the map</p>'  
+        templateUrl : "senagog-map/senagog-map.htm" 
     });

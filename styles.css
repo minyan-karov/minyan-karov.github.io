@@ -1,5 +1,10 @@
 * {
     box-sizing: border-box;
 	font-family: Arial, Helvetica, sans-serif;
-    margin: auto;
+	margin: auto;
+}
+
+#map {
+	height: 400px;
+	width: 100%;
 }
