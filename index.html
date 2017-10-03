@@ -4,8 +4,13 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
-        <script src="app.module.js"></script>
-        <script src="app.config.js"></script>
+        
+        
+        <script src="senagog-map/senagog-map.module.js"></script>
+        <script src="senagog-map/senagog-map.component.js"></script>
+        
+        <script src="app/app.module.js"></script>
+        <script src="app/app.config.js"></script>
         
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">       
@@ -13,11 +18,10 @@
     </head>
     <body ng-app="myApp">
         <p><a href="#/!">Main</a></p>
-
         <a href="#!red">Red</a>
         <a href="#!green">Green</a>
+        <a href="#!map">map</a>
         <a href="#!/blue/3/ch/4">Blue</a>
-<pre>$routeParams = {{$routeParams}}</pre>
         <div ng-view></div>
     </body>
 </html>
