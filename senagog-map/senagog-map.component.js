@@ -2,8 +2,10 @@ angular.
   module('senagogMap').
   component('senagogMap', {
         templateUrl : "senagog-map/senagog-map.htm",
-        controller : function () {
+        controller : function ($http) {
             
+            var self = this;
+
             var uluru = {lat: -25.363, lng: 131.044};
             
             var map = new google.maps.Map(document.getElementById('map'), {
@@ -15,5 +17,14 @@ angular.
                 position: uluru,
                 map: map
             });
+
+            $http.get('https://script.googleusercontent.com/macros/s/AKfycbxWJgCP0uIg5AgVxORyPWbZw4p7IJotc1aIcIdNFFqjmzIpUog/exec?fun=getSenagogs').then(
+                function(response) {
+                    self.senagogs = response.data;
+                }
+            );
+
+
         }
+
     });
