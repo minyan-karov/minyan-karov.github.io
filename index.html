@@ -12,6 +12,9 @@
         <script src="senagog-map/senagog-map.module.js"></script>
         <script src="senagog-map/senagog-map.component.js"></script>
         
+        <script src="side-nav/side-nav.module.js"></script>
+        <script src="side-nav/side-nav.component.js"></script>
+
         <script src="app/app.module.js"></script>
         <script src="app/app.config.js"></script>
         
@@ -25,28 +28,9 @@
     <body ng-app="myApp">
         
         
-        <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <p><a href="#/!">Main</a></p>
-            <a href="#!red">Red</a>
-            <a href="#!green">Green</a>
-            <a href="#!map">map</a>
-            <a href="#!zmanim">zmanim</a>
-            <a href="#!/blue/3/ch/4">Blue</a>
-        </div>
-
-        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-        
-        <script>
-                function openNav() {
-                    document.getElementById("mySidenav").style.width = "250px";
-                }
-                
-                function closeNav() {
-                    document.getElementById("mySidenav").style.width = "0";
-                }
-        </script>
-
+        <side-nav></side-nav>
         <div ng-view></div>
+
+        
     </body>
 </html>
