@@ -1,11 +1,14 @@
-<html>
+<html dir="rtl">
     <head>
         <title>Minyan</title>
         <link rel="stylesheet" href="styles.css?version=1">
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
         
-        
+        <script src="zmanim/zmanim.js"></script>
+        <script src="zmanim/zmanim.module.js"></script>
+        <script src="zmanim/zmanim.component.js"></script>
+
         <script src="senagog-map/senagog-map.module.js"></script>
         <script src="senagog-map/senagog-map.component.js"></script>
         
@@ -20,11 +23,30 @@
         
     </head>
     <body ng-app="myApp">
-        <p><a href="#/!">Main</a></p>
-        <a href="#!red">Red</a>
-        <a href="#!green">Green</a>
-        <a href="#!map">map</a>
-        <a href="#!/blue/3/ch/4">Blue</a>
+        
+        
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <p><a href="#/!">Main</a></p>
+            <a href="#!red">Red</a>
+            <a href="#!green">Green</a>
+            <a href="#!map">map</a>
+            <a href="#!zmanim">zmanim</a>
+            <a href="#!/blue/3/ch/4">Blue</a>
+        </div>
+
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        
+        <script>
+                function openNav() {
+                    document.getElementById("mySidenav").style.width = "250px";
+                }
+                
+                function closeNav() {
+                    document.getElementById("mySidenav").style.width = "0";
+                }
+        </script>
+
         <div ng-view></div>
     </body>
 </html>
